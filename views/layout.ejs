@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SafeWatch Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- ✅ Main CSS (cache fix added) -->
+  <link rel="stylesheet" href="/css/style.css?v=2">
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ✅ Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ✅ Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <% if (user) { %>
+    <nav class="navbar">
+
+      <div class="nav-brand">
+        <i class="fas fa-shield-halved"></i> SafeWatch
+      </div>
+
+      <div class="nav-links">
+        <a href="/alerts">
+          <i class="fas fa-bell"></i> Dashboard
+        </a>
+
+        <a href="/map">
+          <i class="fas fa-map-location-dot"></i> Map
+        </a>
+
+        <a href="/alerts/solved">
+          <i class="fas fa-check-circle"></i> Solved
+        </a>
+
+        <a href="/guidelines">
+          <i class="fas fa-book"></i> Guidelines
+        </a>
+      </div>
+
+      <div class="nav-user">
+        <span class="user-role <%= user.role %>">
+          <%= user.role.toUpperCase() %>
+        </span>
+
+        <span class="user-name">
+          <%= user.username %>
+        </span>
+
+        <a href="/logout" class="btn-logout">
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </div>
+
+    </nav>
+  <% } %>
+
+  <!-- ✅ MAIN CONTENT -->
+  <main class="container">
+    <%- body %>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/js/app.js"></script>
+  <!-- ✅ SCRIPTS (placed at bottom for performance) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/js/app.js"></script>
+
+</body>
+</html>

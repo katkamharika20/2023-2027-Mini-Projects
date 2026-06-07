@@ -1,0 +1,7 @@
+<%- include('layout', { body: `
+<div class="empty-state" style="padding-top: 100px;">
+  <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--danger);"></i>
+  <h2>${typeof message !== 'undefined' ? message : 'Something went wrong'}</h2>
+  <a href="/" class="btn btn-primary" style="margin-top: 1rem;">Go Home</a>
+</div>
+` }) %>

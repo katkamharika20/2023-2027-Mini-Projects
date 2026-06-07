@@ -1,0 +1,26 @@
+<div class="alerts-grid">
+
+  <% alerts.forEach(alert => { %>
+
+    <div class="alert-card solved-card <%= alert.type %>">
+
+      <div class="alert-header">
+        <span><%= alert.type %></span>
+
+        <span class="badge-status solved">Solved</span>
+      </div>
+      <p><b>Location:</b>
+        <%= alert.location.latitude %>, <%= alert.location.longitude %>
+      </p>
+      <p><%= alert.description %></p>
+
+      <p>
+        Solved by:
+        <%= alert.solvedBy ? alert.solvedBy.username : 'Officer' %>
+      </p>
+
+    </div>
+
+  <% }) %>
+
+</div>

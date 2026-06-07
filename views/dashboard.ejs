@@ -1,0 +1,60 @@
+<div class="alerts-grid">
+  <% alerts.forEach(alert => { %>
+    <div class="alert-card <%= alert.type %>">
+      
+      <!-- Alert Header -->
+      <div class="alert-header">
+        <strong><span class="badge-type"><%= alert.type.toUpperCase() %></span></strong>
+        <span class="badge-status <%= alert.status === 'solved' ? 'solved' : 'active' %>">
+          <%= alert.status.charAt(0).toUpperCase() + alert.status.slice(1) %>
+        </span>
+      </div>
+
+      <!-- Alert Details -->
+      <div class="alert-details">
+        <p><b>Location:</b> <%= alert.location.latitude %>, <%= alert.location.longitude %></p>
+        <p><b>Device:</b> <%= alert.deviceId %></p>
+        <% if (alert.description) { %>
+          <p><%= alert.description %></p>
+        <% } %>
+      </div>
+
+      <!-- Alert Notes -->
+      <% if (alert.notes && alert.notes.length > 0) { %>
+        <div class="alert-notes">
+          <h4>Notes:</h4>
+          <% alert.notes.forEach(note => { %>
+            <p>
+              <strong><%= note.author ? note.author.username : 'Officer' %>:</strong>
+              <%= note.text %>
+            </p>
+          <% }) %>
+        </div>
+      <% } %>
+
+      <!-- Action Buttons (Police only) -->
+      <% if (user&&user.role === 'police') { %>
+        <div class="alert-actions">
+          <% if (alert.status !== 'solved') { %>
+            <button class="btn-solve" onclick="solveAlert('<%= alert._id %>')">Solve</button>
+          <% } %>
+          <button class="btn-add-note" onclick="openNoteModal('<%= alert._id %>')">Add Note</button>
+        </div>
+      <% } %>
+
+    </div> <!-- End of alert-card -->
+  <% }) %>
+</div>
+
+<!-- Note Modal -->
+<div id="noteModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Add Note</h3>
+    <textarea id="noteText" placeholder="Enter your note..."></textarea>
+    <br><br>
+    <button onclick="submitNote()">Save</button>
+    <button onclick="closeNoteModal()">Cancel</button>
+  </div>
+</div>
+
+<div id="modalOverlay" class="modal-overlay hidden" onclick="closeNoteModal()"></div>

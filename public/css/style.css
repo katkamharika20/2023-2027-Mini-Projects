@@ -1,0 +1,534 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right,#fef6ff, #f0f9ff);
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #cdb4db, #bde0fe);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.nav-links a:hover {
+  background: #ffc8dd;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Cards */
+.alert-card {
+  background:white;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px;
+  transition: 0.3s;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.alert-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Grid */
+.alerts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-success {
+  background: #b5ead7;
+}
+
+.btn-primary {
+  background: #a0c4ff;
+}
+
+.btn-outline {
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  margin: 100px auto;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.hidden {
+  display: none;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.login-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.navbar {
+  background: linear-gradient(90deg, #cdb4db, #bde0fe);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.nav-links a:hover {
+  background: #ffc8dd;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+}
+
+.user-role {
+  background: #ffafcc;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hidden state */
+.hidden {
+  display: none;
+}
+
+/* Visible modal */
+.modal:not(.hidden) {
+  display: flex;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+#map {
+  height: 500px;   /* 🔥 REQUIRED */
+  width: 100%;
+  border-radius: 10px;
+}
+#map {
+  height: 500px;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+#map {
+  height: 500px;   /* 🔥 REQUIRED */
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+.legend {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.legend h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.legend i {
+  width: 14px;
+  height: 14px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.9;
+  border-radius: 50%;
+}
+.leaflet-interactive:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+
+/* ======================
+   GLOBAL STYLES
+====================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+.navbar {
+  background: #007bff;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ======================
+   PAGE HEADER
+====================== */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* ======================
+   CARDS (ALERTS / GUIDELINES)
+====================== */
+.alert-card,
+.guideline-card {
+  background: whitesmoke;   /* 🔥 LIGHT BLUE */
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ======================
+   GRID
+====================== */
+.alerts-grid,
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* ======================
+   BUTTONS
+====================== */
+.btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #007bff;
+}
+
+/* ======================
+   MODAL
+====================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  margin: 100px auto;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f8ff;
+}
+
+.login-card {
+  background: white;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-card input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* ======================
+   ALERT CARDS
+====================== */
+/* ======================
+   COMMON ALERT CARD
+====================== */
+.alert-card {
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  border-left: 6px solid #ccc;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* ======================
+   DASHBOARD (WHITE)
+====================== */
+.alert-card.active-card {
+  background: white;
+}
+
+/* ======================
+   SOLVED PAGE (BLUE)
+====================== */
+.alert-card.solved-card {
+  background:whitesmoke;  /* 🔥 light blue */
+}
+
+/* ======================
+   EMERGENCY COLORS
+====================== */
+.alert-card.combined_danger {
+  border-left-color: red;
+}
+
+.alert-card.ir_proximity {
+  border-left-color: yellow;
+}
+
+.alert-card.manual_trigger {
+  border-left-color: orange;
+}
+
+/* ======================
+   STATUS BADGES
+====================== */
+.badge-status.active {
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.badge-status.solved {
+  background: green;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+.guideline-card {
+  background: whitesmoke;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.alerts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* space between cards */
+}
+
+.alert-card { 
+  background: #fff; 
+  border-radius: 10px; 
+  padding: 15px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+}
+
+.badge-type { 
+  background: white; 
+  color:black; 
+  padding: 3px 8px; 
+  border-radius: 5px; 
+  font-size: 0.8rem; 
+}
+
+.badge-status.solved { 
+  background: #28a745; 
+  color: #fff; 
+  padding: 3px 8px; 
+  border-radius: 5px; 
+}
+
+.badge-status.active { 
+  background: #dc3545; 
+  color: #fff; 
+  padding: 3px 8px; 
+  border-radius: 5px; 
+}
+
+.alert-actions { 
+  margin-top: 10px; 
+}
+
+.btn-solve, .btn-add-note { 
+  padding: 5px 10px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-right: 5px; 
+}
+
+.btn-solve { background: whitesmoke; color: black; border:black 1px solid; }
+.btn-add-note { background: whitesmoke; color: black; border:black 1px solid; }
+
+.modal { 
+  position: fixed; top: 50%; left: 50%; 
+  transform: translate(-50%, -50%); 
+  background: whitesmoke; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+  z-index: 1001; 
+  width:400px;
+  max-width: 90%;        /* responsive for small screens */
+  max-height: 90vh;      /* never exceed 90% of viewport height */
+  overflow-y: auto;  
+}
+
+
+.modal-overlay { 
+  position: fixed; top: 0; left: 0; 
+  width: 100%; height: 100%; 
+  background: rgba(0,0,0,0.5); 
+  z-index: 1000; 
+}
+.hidden {
+  display: none; /* hide modal and overlay when not active */
+}
+.alert-card {
+  position: relative; /* needed for absolute positioning of badge */
+  background:whitesmoke;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.badge-status {
+  position: absolute; /* place relative to alert-card */
+  top: 10px;
+  right: 10px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* Status colors */
+.badge-status.solved {
+  background-color: #28a745; /* green for solved */
+}
+
+.badge-status.active {
+  background-color: #dc3545; /* red for active */
+}
